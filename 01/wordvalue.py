@@ -4,7 +4,7 @@ def load_words():
     """Load dictionary into a list and return list"""
     words = []
     with open("dictionary.txt", "r") as f:
-        words.append(f.readline())
+        words.append(f.read())
     return words
 
 def calc_word_value():
@@ -18,4 +18,6 @@ def max_word_value():
     pass
 
 if __name__ == "__main__":
-    pass # run unittests to validate
+    result = load_words()
+    print result
+    print(len(load_words()))
